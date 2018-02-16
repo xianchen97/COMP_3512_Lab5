@@ -116,7 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AbstractOperation.hpp" />
+    <ClInclude Include="AdditionOperation.hpp" />
+    <ClInclude Include="Class.h" />
+    <ClInclude Include="DivisionOperation.hpp" />
+    <ClInclude Include="MultiplicationOperation.hpp" />
     <ClInclude Include="Operation.hpp" />
+    <ClInclude Include="RPNCalculator.hpp" />
+    <ClInclude Include="SubtractionOperation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdditionOperation.cpp" />
