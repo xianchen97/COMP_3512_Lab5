@@ -120,7 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AdditionOperation.cpp" />
-    <ClCompile Include="Operation.cpp" />
+    <ClCompile Include="DivisionOperation.cpp" />
+    <ClCompile Include="MultiplicationOperation.cpp" />
+    <ClCompile Include="SubtractionOperation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
