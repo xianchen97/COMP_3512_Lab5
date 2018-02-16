@@ -6,11 +6,18 @@
 #include "MultiplicationOperation.hpp"
 #include "SubtractionOperation.hpp"
 
-
+/*
+Class performs reverse polish notation using std::stack.
+*/
 class RPNCalculator {
 	int result;
 	std::stack<int> stack;
-	Operation * operation_type(char value) {
+
+	/*
+	Operation returns the operation class associated with the operation type.
+	*/
+	Operation * operation_type(char value) 
+	{
 		switch(value){
 			case AdditionOperation::OPERATION_CODE: return new AdditionOperation;
 			case MultiplicationOperation::OPERATION_CODE: return new MultiplicationOperation;
@@ -19,8 +26,10 @@ class RPNCalculator {
 		}
 	}
 
+
+
 	void perform(Operation * operand) {
-		
+		operand->perform(stack.top(), stack.top());
 	}
 
 

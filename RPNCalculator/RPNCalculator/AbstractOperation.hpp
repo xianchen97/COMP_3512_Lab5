@@ -9,7 +9,7 @@ class AbstractOperation : public Operation {
 
 	public:
 
-		inline ~AbstractOperation() {};
+		~AbstractOperation() {};
 
 		/*
 		Assigns a valid mathematical operation to operation_type.

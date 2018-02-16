@@ -14,7 +14,10 @@ public:
 	*/
 	virtual int get_code() = 0;
 
-	virtual int perform(int, int);
+	/*
+	Performs operatio between two ints.
+	*/
+	virtual int perform(int, int) = 0;
 
 
 };
