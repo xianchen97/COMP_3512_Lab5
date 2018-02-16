@@ -14,5 +14,7 @@ public:
 	*/
 	virtual int get_code() = 0;
 
+	virtual int perform(int, int);
+
 
 };
