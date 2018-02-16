@@ -8,16 +8,22 @@ class AbstractOperation : public Operation {
 	char operation_type;
 
 	public:
+
 		inline ~AbstractOperation() {};
 
 		/*
 		Assigns a valid mathematical operation to operation_type.
 		*/
-		AbstractOperation(char operation) {
+		AbstractOperation(char operation)
+		{
 			operation_type = operation;
 		}
 
-		int Operation::get_code() {
+		/*
+			Returns the operator type in ASCII.
+		*/
+		int Operation::get_code() override
+		{
 			return operation_type;
 		}
 
