@@ -49,7 +49,7 @@ class RPNCalculator {
 		stack.pop();
 		int val2 = stack.top();
 		stack.pop();
-		stack.push(operand->perform(val1, val2));
+		stack.push(operand->perform(val2, val1));
 	}
 
 public:

@@ -9,9 +9,8 @@ int main()
 	std::string stringSubtraction = "4 2 -";
 	std::string stringMultiplication = "4 2 *";
 	std::string stringDivision = "4 2 /";
-	std::string complexEquation = " 2 - 3 * 4";
-	std::string complexEquation2 = "2 3 4 * -";
-	std::string complexEquation3 = "2 3 - 4 *";
+	std::string complexEquation1 = "2 3 4 * -";
+	std::string complexEquation2 = "2 3 - 4 *";
 
 
 	//ADD
@@ -35,6 +34,17 @@ int main()
 
 	std::cout << "You entered " << stringSubtraction << " equal to 4 - 2" << std::endl;
 	result = calculator.process_form(stringSubtraction);
+	std::cout << "The result is:\n";
+	std::cout << result << std::endl;
+
+
+	std::cout << "You entered " << complexEquation1 << " equal to 2 - 3 * 4" << std::endl;
+	result = calculator.process_form(complexEquation1);
+	std::cout << "The result is:\n";
+	std::cout << result << std::endl;
+
+	std::cout << "You entered " << complexEquation2 << " equal to (2 - 3) * 4" << std::endl;
+	result = calculator.process_form(complexEquation2);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 
