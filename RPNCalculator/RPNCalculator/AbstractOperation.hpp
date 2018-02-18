@@ -16,7 +16,7 @@ class AbstractOperation : public Operation {
 		*/
 		AbstractOperation(char operation)
 		{
-			operation_type = operation;
+			operation_type = operation;	
 		}
 
 		/*
