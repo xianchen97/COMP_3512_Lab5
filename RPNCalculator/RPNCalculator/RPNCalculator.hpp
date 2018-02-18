@@ -24,9 +24,13 @@ class RPNCalculator {
 	{
 		switch(value){
 			case AdditionOperation::OPERATION_CODE: return new AdditionOperation;
+				break;
 			case MultiplicationOperation::OPERATION_CODE: return new MultiplicationOperation;
+				break;
 			case DivisionOperation::OPERATION_CODE: return new DivisionOperation;
+				break;
 			case SubtractionOperation::OPERATION_CODE: return new SubtractionOperation;
+				break;
 		}
 	}
 
@@ -45,17 +49,21 @@ class RPNCalculator {
 		stack.pop();
 		int val2 = stack.top();
 		stack.pop();
-		operand->perform(val1, val2);
+		stack.push(operand->perform(val1, val2));
 	}
 
 public:
+	/*
+	Function processes a string from user input.
+	PRECONDITION: User enters valid statement 
+	*/
 	int process_form(std::string arg) {
 		std::istringstream	iss{ arg };
 		std::string formula;
 		while (iss >> formula) {
 			std::istringstream iss2{ formula };
 
-			int integer ;
+			int integer;
 			if (iss2 >> integer) {
 				stack.push(integer);
 			}

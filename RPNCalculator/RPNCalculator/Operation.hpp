@@ -7,7 +7,7 @@ public:
 	/*
 	Define inline virtual constructor.
 	*/
-	inline virtual ~Operation() {};
+	virtual ~Operation() {};
 
 	/*
 	Returns the ASCII code for operator types.
