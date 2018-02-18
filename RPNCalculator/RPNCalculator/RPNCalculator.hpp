@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>	
 #include <stack>
+#include <string>
 #include "AdditionOperation.hpp"
 #include "DivisionOperation.hpp"
 #include "MultiplicationOperation.hpp"
@@ -39,10 +40,14 @@ class RPNCalculator {
 
 	*/
 	void perform(Operation * operand) {
-		
-		operand->perform(stack.top(), stack.top());
+		int val1 = stack.top();
+		stack.pop();
+		int val2 = stack.top();
+		stack.pop();
+		operand->perform(val1, val2);
 	}
 
-
+public:
+	int process_form(std::string arg) {};
 
 };
