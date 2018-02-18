@@ -1,6 +1,6 @@
-#include "RPNCalculator.hpp"
 #include <iostream>
-#include  <string>
+#include <string>
+#include "RPNCalculator.hpp"
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
 	std::getline(std::cin, formula);
 	std::cout << "You entered " << formula << std::endl;
 	RPNCalculator calculator;
-	int result = calculator.process_formula(formula);
+	int result = calculator.process_form(formula);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 	system("pause");

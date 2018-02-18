@@ -2,6 +2,7 @@
 #include <iostream>	
 #include <stack>
 #include <string>
+#include <sstream>
 #include "AdditionOperation.hpp"
 #include "DivisionOperation.hpp"
 #include "MultiplicationOperation.hpp"
@@ -48,6 +49,21 @@ class RPNCalculator {
 	}
 
 public:
-	int process_form(std::string arg) {};
+	int process_form(std::string arg) {
+		std::istringstream	iss{ arg };
+		std::string formula;
+		while (iss >> formula) {
+			std::istringstream iss2{ formula };
+
+			int integer ;
+			if (iss2 >> integer) {
+				stack.push(integer);
+			}
+			else {
+				perform(operation_type(formula[0]));
+			}
+		}
+		return stack.top();
+	};
 
 };

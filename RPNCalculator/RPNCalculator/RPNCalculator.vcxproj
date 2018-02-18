@@ -124,11 +124,7 @@
     <ClInclude Include="SubtractionOperation.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdditionOperation.cpp" />
-    <ClCompile Include="DivisionOperation.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MultiplicationOperation.cpp" />
-    <ClCompile Include="SubtractionOperation.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
