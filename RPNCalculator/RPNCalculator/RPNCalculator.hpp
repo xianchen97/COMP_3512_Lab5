@@ -17,19 +17,19 @@ class RPNCalculator {
 
 	/*
 	Operation returns the operation class associated with the operation type.
-	PRECONDITION: 
-	POSTCONDTION: 
+	PRECONDITION: Operation type is valid.
+	POSTCONDTION: Returns the class representing the operation.
 	*/
 	Operation * operation_type(char value) 
 	{
 		switch(value){
-			case AdditionOperation::OPERATION_CODE: return new AdditionOperation;
+			case AdditionOperation::OPERATION_CODE:		  return new AdditionOperation;
 				break;
 			case MultiplicationOperation::OPERATION_CODE: return new MultiplicationOperation;
 				break;
-			case DivisionOperation::OPERATION_CODE: return new DivisionOperation;
+			case DivisionOperation::OPERATION_CODE:		  return new DivisionOperation;
 				break;
-			case SubtractionOperation::OPERATION_CODE: return new SubtractionOperation;
+			case SubtractionOperation::OPERATION_CODE:    return new SubtractionOperation;
 				break;
 		}
 	}
@@ -39,9 +39,9 @@ class RPNCalculator {
 	/*
 	Method takes in an operand a performs reverse polish notation on the given operand.
 	The method uses a stack and pops values from the top of the stack.
-	PRECONDITIONS: There are values in the stack
-				   Passing valid Operation
-	Postcondition: RPN performed on the stack.
+	PRECONDITION: There are values in the stack.
+				  Passing valid Operation.
+	POSTCONDITION: RPN performed on the stack.
 
 	*/
 	void perform(Operation * operand) {
@@ -55,7 +55,7 @@ class RPNCalculator {
 public:
 	/*
 	Function processes a string from user input.
-	PRECONDITION: User enters valid statement 
+	PRECONDITION: User enters valid statement.
 	*/
 	int process_form(std::string arg) {
 		std::istringstream	iss{ arg };

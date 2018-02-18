@@ -21,29 +21,31 @@ int main()
 	std::cout << result << std::endl;
 
 	//MULTIPLY
-	std::cout << "You entered " << stringMultiplication << " equal to 4 * 2" << std::endl;
+	std::cout << "\nYou entered " << stringMultiplication << " equal to 4 * 2" << std::endl;
 	result = calculator.process_form(stringMultiplication);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 
 	//DIVIDE
-	std::cout << "You entered " << stringDivision << " equal to 4 / 2" << std::endl;
+	std::cout << "\nYou entered " << stringDivision << " equal to 4 / 2" << std::endl;
 	result = calculator.process_form(stringDivision);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 
-	std::cout << "You entered " << stringSubtraction << " equal to 4 - 2" << std::endl;
+	//SUBTRACTION
+	std::cout << "\nYou entered " << stringSubtraction << " equal to 4 - 2" << std::endl;
 	result = calculator.process_form(stringSubtraction);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 
-
-	std::cout << "You entered " << complexEquation1 << " equal to 2 - 3 * 4" << std::endl;
+	//COMPLEX EQ
+	std::cout << "\nYou entered " << complexEquation1 << " equal to 2 - 3 * 4" << std::endl;
 	result = calculator.process_form(complexEquation1);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
-
-	std::cout << "You entered " << complexEquation2 << " equal to (2 - 3) * 4" << std::endl;
+	
+	//COMPLEX EQ
+	std::cout << "\nYou entered " << complexEquation2 << " equal to (2 - 3) * 4" << std::endl;
 	result = calculator.process_form(complexEquation2);
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
